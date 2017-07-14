@@ -12,9 +12,18 @@ class ViewController: UIViewController {
 
 
     @IBOutlet weak var newLabel: UILabel!
+    @IBOutlet weak var addLabel: UILabel!
+    @IBOutlet weak var textfield1: UITextField!
+    @IBOutlet weak var textfield2: UITextField!
     
     var buttoncounter = 0
     
+    @IBAction func AddButton(_ sender: Any) {
+        
+        addLabel.text = textfield1.text! + textfield2.text!
+        addLabel.text = String(Int(textfield1.text!)! + Int(textfield2.text!)!)
+        
+    }
     @IBAction func PushButton(_ sender: Any) {
         newLabel.text = "Is the Best!"
         newLabel.textColor = UIColor.red
